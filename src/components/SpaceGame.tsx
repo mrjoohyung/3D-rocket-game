@@ -1390,7 +1390,7 @@ export default function SpaceGame() {
               onClick={(e) => handleToggleMute(e)}
               className="flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors text-xs pointer-events-auto font-mono border-l border-slate-700 pl-4"
             >
-              {isMuted => isAudioMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-sky-400" />}
+              {isAudioMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-sky-400" />}
               <span>{isAudioMuted ? 'Muted' : 'Sound Synthesizer'}</span>
             </button>
           </div>
