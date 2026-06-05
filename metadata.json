@@ -1,0 +1,6 @@
+{
+  "name": "3D Space Star Game",
+  "description": "An immersive 3D canvas spaceflight game where you steer a spaceship to collect glowing space stars, tracking scores and speed.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
