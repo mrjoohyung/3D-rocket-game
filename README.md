@@ -1,20 +1,57 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🚀 3D Space Star Game
 
-# Run and deploy your AI Studio app
+몰입감 넘치는 3D 캔버스 우주 비행 게임입니다. 플레이어는 우주선을 조종하여 소행성 충돌을 피하고 반짝이는 스타를 획득하여 최고 점수를 기록해야 합니다.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/c5e42b35-f0b0-48ea-835c-35799a646916
+## 🌟 주요 기능
 
-## Run Locally
+- **고급 3D 스타파이터 모델**: 전면 레이저 포트, 전후면 구조 노드, 날개 끝 비행 비콘을 장착한 고화질 3D 우주선 렌더링.
+- **방어용 디플렉션 실드 (Deflection Shield)**: 몰입감을 높여주는 실드 게이지 시스템. 소행성과 충돌 시 실드가 손상되며, 실드가 0이 되면 게임 오버됩니다.
+- **점진적 레벨 스케일링**: 점수가 올라갈수록 소행성 등장 빈도와 비행 속도가 점진적으로 상승하여 도전 욕구를 자극합니다.
+- **사운드 신디사이저**: 저지연 음향 신디사이저를 내장하여 몰입도를 극대화했습니다.
+- **다양한 컨트롤 모드**: 키보드(우주선 제어 및 쉬프트 가속), 마우스 조종, 모바일 터치 패드를 모두 지원합니다.
 
-**Prerequisites:**  Node.js
+---
 
+## 🛠️ 기술 스택 및 구조
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Frontend**: React (TypeScript), Vite, Tailwind CSS
+- **Graphics**: HTML5 Canvas (3D 수학적 공간 투영 및 경량 물리 충돌 감지)
+- **Deployment**: GitHub Actions (`.github/workflows/deploy.yml`)
+
+---
+
+## 🚀 GitHub Actions 배포 및 활성화 방법
+
+우주선 게임 빌드 아티팩트를 **GitHub Pages**를 통해 자동으로 배포하도록 설정되어 있습니다. GitHub 리포지토리에 푸시한 후 아래 과정을 거치면 게임을 웹사이트로 즉시 확인할 수 있습니다.
+
+### 1. 변경 사항 Push 하기
+AI Studio 도구 혹은 Git 클라이언트를 통해 본 변경 사항(새롭게 추가된 워크플로우 및 README)을 저장소의 `main` (또는 `master`) 브랜치로 **Push**합니다.
+
+### 2. GitHub Pages 권한 및 빌드 활성화 설정
+Push 직후, GitHub 웹사이트의 해당 리포지토리 페이지로 이동하여 아래 설정을 진행해야 배포가 정상 가동됩니다.
+
+1. 리포지토리의 우측 상단 **Settings** 메뉴로 이동합니다.
+2. 왼쪽 사이드바에서 **Pages**를 클릭합니다.
+3. **Build and deployment** 섹션의 **Source** 드롭다운에서 **GitHub Actions**를 선택합니다.
+4. 이제 소스 코드가 수정되어 푸시될 때마다 `.github/workflows/deploy.yml`이 작동하여 자동으로 정적 사이트가 빌드 및 배포됩니다!
+
+### 3. 배포 확인
+- 리포지토리 상단의 **Actions** 탭으로 이동하면 실시간 빌드 및 배포 과정을 볼 수 있습니다.
+- 빌드가 끝나면 셋업에 따라 `https://<YOUR-GITHUB-USERNAME>.github.io/<REPO-NAME>/` 경로에서 게임을 바로 플레이하실 수 있습니다.
+
+---
+
+## 💻 로컬 개발 환경 실행
+
+```bash
+# 1. 의존성 패키지 설치
+npm install
+
+# 2. 로컬 개발 서버 실행
+npm run dev
+
+# 3. 배포용 빌드 테스트
+npm run build
+```
